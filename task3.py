@@ -8,7 +8,7 @@
 # а-5 б-2 д-1 к-1 р-2
 
 s = {}
-k = input().split()
+k = list(input())
 
 for i in range(len(k)):
     c = 0
