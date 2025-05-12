@@ -2,19 +2,38 @@
 # Придумайте шифр, в котором буквы заменяются на какие-то символы
 # и реализуйте шифроватор и дешифроватор
 
-# шифроватор
-d1 = {'a': '!', 'b': '@', 'c': '#', 'd': '$', 'e': '%', 'f': '^', ' ': ' '}
-text1 = list(input())
-code1 = list(['']*len(text1))
+print('Здравствуйте! Если Вы хотите зашифровать текст введите !, следом вводите текст.')
+print('Текст может состоять только из первых 6 букв латиницы (abcdef) и пробелов с точками')
+print('А если нужно дешифровать послание наберите 1, потом введите послание.')
+print('Послание может содержать только следующие символы: !@#$%^ и пробел с точкой.')
+print('Удачи!')
+a = str(input())
 
-for i in range(0, len(text1)):
-    code1[i] = d1[text1[i]]
-print(code1)
+if a == '!':
 
-#душифроватор
-d2 = {'!': 'a', '@': 'b', '#': 'c', '$': 'd', '%': 'e', '^': 'f', ' ': ' '}
-code2 = list(input())
-text2 = list(['']*len(code2))
-for i in range(0, len(code2)):
-    text2[i] = d2[code2[i]]
-print(text2)
+    # шифроватор
+    d1 = {'a': '!', 'b': '@', 'c': '#', 'd': '$', 'e': '%', 'f': '^', ' ': ' '}
+    text1 = list(input())
+    code1 = list(['']*len(text1))
+
+    for i in range(0, len(text1)):
+        code1[i] = d1[text1[i]]
+
+    for i in range(len(code1)):
+        print(code1[i], end="")
+
+elif a == '1':
+
+    #душифроватор
+    d2 = {'!': 'a', '@': 'b', '#': 'c', '$': 'd', '%': 'e', '^': 'f', ' ': ' '}
+    code2 = list(input())
+    text2 = list(['']*len(code2))
+
+    for i in range(0, len(code2)):
+        text2[i] = d2[code2[i]]
+
+    for i in range(len(text2)):
+        print(text2[i], end="")
+
+else:
+    print('ошибка')

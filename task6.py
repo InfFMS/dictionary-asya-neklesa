@@ -14,7 +14,7 @@ inventory = {
 # Выведите на экран обновлённый словарь inventory.
 
 inventory['карман'] = ['ракушки', 'ягода', 'платок']
-inventory['сумка'] = ['ксилофон', 'спальный мешок', 'буханка хлеба']
 inventory['сумка'].sort()
-inventory['золото'] = 550
+inventory['сумка'].remove('кинжал')
+inventory['золото'] = inventory['золото'] + 50
 print(inventory)

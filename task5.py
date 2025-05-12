@@ -8,4 +8,4 @@
 dicth = {'dog': 'собака', 'cat': 'кошка', 'table': 'стол', 'school': 'школа', 'student': 'ученик', 'teatcher': 'учитель', 'door': 'дверь', 'parrot': 'попугай'}
 print(dicth.keys())
 a = str(input())
-print(dicth.get('a', 'нет такого слова'))
+print(dicth.get(a, 'нет такого слова'))

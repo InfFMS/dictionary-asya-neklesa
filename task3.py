@@ -8,10 +8,18 @@
 # а-5 б-2 д-1 к-1 р-2
 
 s = {}
-k = list(input())
+m = []
+k = str(input())
+l = k.lower()
+l = list(l)
 
-for i in range(len(k)):
-    c = 0
-    for j in range(len(k)):
-        if k[i] = k[j]:
-            c += 1
+i = 0
+while i < len(l):
+    m.append(l.count(l[i]))
+    i += 1
+
+for i in range(len(l)):
+    s[l[i]] = m[i]
+
+for keys in s:
+    print(keys + '-' + str(s[keys]))
